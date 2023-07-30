@@ -8,7 +8,7 @@ g = []
 for i in range(n):
     g.append(list(map(int, input().split())))
 
-    
+
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
@@ -22,7 +22,7 @@ def dfs(x, y, rain):
             continue
         if visited[nx][ny] is False: # 방문하지 않은 노드인 경우
             dfs(nx, ny, rain)
-    
+
 
 
 max_h = 0
@@ -40,7 +40,7 @@ for rain in range(max_h + 1):
                 cnt += 1
     if cnt > max_:
         max_ = cnt
-        
+
 
 print(max_) # 해당 코드를 pypy3에 넣었을 때 메모리 초과가 일어나지만 python3에선 통과되었음.
 # pypy3는 속도가 python에 비해 빠른 대신 메모리를 더 많이 사용하기 때문
